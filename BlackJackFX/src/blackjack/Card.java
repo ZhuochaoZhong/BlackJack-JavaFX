@@ -10,43 +10,23 @@ public class Card {
     private Image image;
 
 
-    public Card(String suit, String ranking, int cardValue, Image image) {
+    Card(String suit, String ranking, int cardValue, Image image) {
         this.suit = suit;
         this.ranking = ranking;
         this.cardValue = cardValue;
         this.image = image;
     }
 
-    public String getSuit() {
-        return suit;
-    }
-
-    public void setSuit(String suit) {
-        this.suit = suit;
-    }
-
-    public String getRanking() {
+    String getRanking() {
         return ranking;
     }
 
-    public void setRanking(String ranking) {
-        this.ranking = ranking;
-    }
-
-    public int getCardValue() {
+    int getCardValue() {
         return cardValue;
     }
 
-    public void setCardValue(int cardValue) {
-        this.cardValue = cardValue;
-    }
-
-    public Image getImage() {
+    Image getImage() {
         return image;
-    }
-
-    public void setImage(Image image) {
-        this.image = image;
     }
 
     @Override

@@ -6,7 +6,7 @@ import java.util.*;
 
 import static java.util.Arrays.asList;
 
-public class Deck {
+class Deck {
 
     private List<String> SUITS = new ArrayList<String>() {{
         addAll(asList("Heart", "Diamond", "Club", "Spade"));
@@ -53,8 +53,6 @@ public class Deck {
     }};
 
 
-
-    private Card card;
     private List<Card> standardDeck = new ArrayList<>();
     private List<Image> imageListH = new ArrayList<>();
     private List<Image> imageListD = new ArrayList<>();
@@ -62,28 +60,29 @@ public class Deck {
     private List<Image> imageListS = new ArrayList<>();
 
 
-    public List<Card> getStandardDeck() {
+    List<Card> getStandardDeck() {
         return standardDeck;
     }
 
-    public void shuffle() {
+    void shuffle() {
         Collections.shuffle(standardDeck);
     }
 
 
-    public Card deal() {
+    Card deal() {
         // Dealing a card from the deck(card removed from deck),
         // card will be a String with suit and ranking (ie. "H3" --> three of hearts)
         return standardDeck.remove(0);
     }
 
-    public void newDeck() {
+    void newDeck() {
 
         getImageListD();
         getImageListH();
         getImageListC();
         getImageListS();
 
+        Card card;
         for (int i = 0; i < 12; i++) {
             card = new Card(SUITS.get(0), RANKING.get(i), CARDVALUE.get(RANKING.get(i)), imageListH.get(i));
             standardDeck.add(card);
@@ -105,35 +104,31 @@ public class Deck {
         }
     }
 
-    public List<Image> getImageListD() {
+    private void getImageListD() {
 
         for (int i = 0; i < 13; i++) {
             imageListD.add(new Image(imgPath.get(i)));
         }
-        return imageListD;
     }
 
-    public List<Image> getImageListH() {
+    private void getImageListH() {
 
         for (int i = 13; i < 26; i++) {
             imageListH.add(new Image(imgPath.get(i)));
         }
-        return imageListH;
     }
 
-    public List<Image> getImageListC() {
+    private void getImageListC() {
 
         for (int i = 26; i < 39; i++) {
             imageListC.add(new Image(imgPath.get(i)));
         }
-        return imageListC;
     }
 
-    public List<Image> getImageListS() {
+    private void getImageListS() {
 
         for (int i = 39; i < 52; i++) {
             imageListS.add(new Image(imgPath.get(i)));
         }
-        return imageListS;
     }
 }

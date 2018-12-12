@@ -10,118 +10,130 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="1000.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="blackjack.Controller">
+<BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="900.0" prefWidth="1300.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.172-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="blackjack.Controller">
     <bottom>
         <HBox alignment="BASELINE_CENTER" prefHeight="26.0" prefWidth="550.0" BorderPane.alignment="CENTER">
-            <children>
-                <Button fx:id="newGame" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#initialize" prefWidth="120.0" text="New Game" wrapText="true">
-                    <HBox.margin>
-                        <Insets bottom="50.0" right="30.0" top="50.0" />
-                    </HBox.margin>
-                </Button>
-                <Button fx:id="deal" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#dealCards" prefWidth="120.0" text="Deal" wrapText="true">
-                    <HBox.margin>
-                        <Insets bottom="50.0" right="30.0" top="50.0" />
-                    </HBox.margin>
-                </Button>
-                <Button fx:id="hit" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#hit" prefWidth="120.0" text="Hit" wrapText="true">
-                    <HBox.margin>
-                        <Insets bottom="50.0" right="30.0" top="50.0" />
-                    </HBox.margin>
-                </Button>
-                <Button fx:id="stand" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#stand" prefWidth="120.0" text="Stand" wrapText="true">
-                    <HBox.margin>
-                        <Insets bottom="50.0" right="30.0" top="50.0" />
-                    </HBox.margin>
-                </Button>
-                <Button fx:id="quit" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#quit" prefWidth="120.0" text="Quit" wrapText="true">
-                    <HBox.margin>
-                        <Insets bottom="50.0" right="30.0" top="50.0" />
-                    </HBox.margin>
-                </Button>
-            </children>
+            <Button fx:id="newGame" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false"
+                    onAction="#initialize" prefWidth="120.0" text="New Game" wrapText="true">
+                <HBox.margin>
+                    <Insets bottom="50.0" right="30.0" top="50.0"/>
+                </HBox.margin>
+            </Button>
+            <Button fx:id="deal" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false"
+                    onAction="#dealCards" prefWidth="120.0" text="Deal" wrapText="true">
+                <HBox.margin>
+                    <Insets bottom="50.0" right="30.0" top="50.0"/>
+                </HBox.margin>
+            </Button>
+            <Button fx:id="hit" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#hit"
+                    prefWidth="120.0" text="Hit" wrapText="true">
+                <HBox.margin>
+                    <Insets bottom="50.0" right="30.0" top="50.0"/>
+                </HBox.margin>
+            </Button>
+            <Button fx:id="stand" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#stand"
+                    prefWidth="120.0" text="Stand" wrapText="true">
+                <HBox.margin>
+                    <Insets bottom="50.0" right="30.0" top="50.0"/>
+                </HBox.margin>
+            </Button>
+            <Button fx:id="quit" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#quit"
+                    prefWidth="120.0" text="Quit" wrapText="true">
+                <HBox.margin>
+                    <Insets bottom="50.0" right="30.0" top="50.0"/>
+                </HBox.margin>
+            </Button>
         </HBox>
     </bottom>
     <center>
         <AnchorPane BorderPane.alignment="CENTER">
             <BorderPane.margin>
-                <Insets top="50.0" />
+                <Insets top="50.0"/>
             </BorderPane.margin>
-            <children>
-                <TextArea fx:id="newDeck" editable="false" layoutX="250.0" layoutY="70.0" prefHeight="100.0" prefWidth="500.0" />
-                <ImageView fx:id="dCard1" fitHeight="180.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" />
-                <ImageView fx:id="dCard2" fitHeight="180.0" fitWidth="130.0" layoutX="130.0" pickOnBounds="true" preserveRatio="true" />
-                <ImageView fx:id="dCard3" fitHeight="180.0" fitWidth="130.0" layoutX="260.0" pickOnBounds="true" preserveRatio="true" />
-                <ImageView fx:id="dCard4" fitHeight="180.0" fitWidth="130.0" layoutX="390.0" pickOnBounds="true" preserveRatio="true" />
-                <ImageView fx:id="dCard5" fitHeight="180.0" fitWidth="130.0" layoutX="520.0" pickOnBounds="true" preserveRatio="true" />
-                <ImageView fx:id="dCard6" fitHeight="180.0" fitWidth="130.0" layoutX="650.0" pickOnBounds="true" preserveRatio="true" />
-                <TextArea fx:id="result" layoutX="130.0" layoutY="200.0" maxHeight="50.0" maxWidth="500.0" />
-                <ImageView fx:id="pCard1" fitHeight="180.0" fitWidth="130.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true" />
-                <ImageView fx:id="pCard2" fitHeight="180.0" fitWidth="130.0" layoutX="130.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true" />
-                <ImageView fx:id="pCard3" fitHeight="180.0" fitWidth="130.0" layoutX="260.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true" />
-                <ImageView fx:id="pCard4" fitHeight="180.0" fitWidth="130.0" layoutX="390.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true" />
-                <ImageView fx:id="pCard5" fitHeight="180.0" fitWidth="130.0" layoutX="520.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true" />
-                <ImageView fx:id="pCard6" fitHeight="180.0" fitWidth="130.0" layoutY="500.0" pickOnBounds="true" preserveRatio="true" />
-                <ImageView fx:id="pCard7" fitHeight="180.0" fitWidth="130.0" layoutX="130.0" layoutY="500.0" pickOnBounds="true" preserveRatio="true" />
-                <ImageView fx:id="pCard8" fitHeight="180.0" fitWidth="130.0" layoutX="260.0" layoutY="500.0" pickOnBounds="true" preserveRatio="true" />
-                <ImageView fx:id="pCard9" fitHeight="180.0" fitWidth="130.0" layoutX="390.0" layoutY="500.0" pickOnBounds="true" preserveRatio="true" />
-                <ImageView fx:id="pCard10" fitHeight="180.0" fitWidth="130.0" layoutX="520.0" layoutY="500.0" pickOnBounds="true" preserveRatio="true" />
-            </children>
+            <ImageView fx:id="dCard1" fitHeight="180.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true"/>
+            <ImageView fx:id="dCard2" fitHeight="180.0" fitWidth="130.0" layoutX="130.0" pickOnBounds="true"
+                       preserveRatio="true"/>
+            <ImageView fx:id="dCard3" fitHeight="180.0" fitWidth="130.0" layoutX="260.0" pickOnBounds="true"
+                       preserveRatio="true"/>
+            <ImageView fx:id="dCard4" fitHeight="180.0" fitWidth="130.0" layoutX="390.0" pickOnBounds="true"
+                       preserveRatio="true"/>
+            <ImageView fx:id="dCard5" fitHeight="180.0" fitWidth="130.0" layoutX="520.0" pickOnBounds="true"
+                       preserveRatio="true"/>
+            <ImageView fx:id="dCard6" fitHeight="180.0" fitWidth="130.0" layoutX="650.0" pickOnBounds="true"
+                       preserveRatio="true"/>
+            <TextArea fx:id="result" layoutX="130.0" layoutY="200.0" maxHeight="50.0" maxWidth="600.0"/>
+            <ImageView fx:id="pCard1" fitHeight="180.0" fitWidth="130.0" layoutY="300.0" pickOnBounds="true"
+                       preserveRatio="true"/>
+            <ImageView fx:id="pCard2" fitHeight="180.0" fitWidth="130.0" layoutX="130.0" layoutY="300.0"
+                       pickOnBounds="true" preserveRatio="true"/>
+            <ImageView fx:id="pCard3" fitHeight="180.0" fitWidth="130.0" layoutX="260.0" layoutY="300.0"
+                       pickOnBounds="true" preserveRatio="true"/>
+            <ImageView fx:id="pCard4" fitHeight="180.0" fitWidth="130.0" layoutX="390.0" layoutY="300.0"
+                       pickOnBounds="true" preserveRatio="true"/>
+            <ImageView fx:id="pCard5" fitHeight="180.0" fitWidth="130.0" layoutX="520.0" layoutY="300.0"
+                       pickOnBounds="true" preserveRatio="true"/>
+            <ImageView fx:id="pCard6" fitHeight="180.0" fitWidth="130.0" layoutY="500.0" pickOnBounds="true"
+                       preserveRatio="true"/>
+            <ImageView fx:id="pCard7" fitHeight="180.0" fitWidth="130.0" layoutX="130.0" layoutY="500.0"
+                       pickOnBounds="true" preserveRatio="true"/>
+            <ImageView fx:id="pCard8" fitHeight="180.0" fitWidth="130.0" layoutX="260.0" layoutY="500.0"
+                       pickOnBounds="true" preserveRatio="true"/>
+            <ImageView fx:id="pCard9" fitHeight="180.0" fitWidth="130.0" layoutX="390.0" layoutY="500.0"
+                       pickOnBounds="true" preserveRatio="true"/>
+            <ImageView fx:id="pCard10" fitHeight="180.0" fitWidth="130.0" layoutX="520.0" layoutY="500.0"
+                       pickOnBounds="true" preserveRatio="true"/>
         </AnchorPane>
     </center>
     <right>
         <VBox maxWidth="247.0" prefHeight="655.0" prefWidth="247.0" BorderPane.alignment="CENTER">
             <BorderPane.margin>
-                <Insets top="80.0" />
+                <Insets top="80.0"/>
             </BorderPane.margin>
-            <children>
-                <ImageView fitHeight="180.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="/resources/Cards/back.jpg" />
-                    </image>
-                    <VBox.margin>
-                        <Insets bottom="50.0" left="100.0" top="200.0" />
-                    </VBox.margin>
-                </ImageView>
-                <TextArea fx:id="dealerScore" editable="false" minHeight="120.0" minWidth="300.0" wrapText="true">
-                    <VBox.margin>
-                        <Insets bottom="20.0" top="20.0" />
-                    </VBox.margin>
-                </TextArea>
-                <TextArea fx:id="playerScore" editable="false" minHeight="80.0" minWidth="300.0" wrapText="true">
-                    <VBox.margin>
-                        <Insets bottom="150.0" />
-                    </VBox.margin>
-                </TextArea>
-            </children>
+            <TextArea fx:id="newDeck" editable="false" minHeight="150.0" minWidth="250.0" wrapText="true">
+                <VBox.margin>
+                    <Insets left="50.0" top="100.0"/>
+                </VBox.margin>
+            </TextArea>
+            <ImageView fitHeight="180.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+                <VBox.margin>
+                    <Insets bottom="50.0" left="100.0"/>
+                </VBox.margin>
+                <Image url="/resources/Cards/back.jpg"/>
+            </ImageView>
+            <TextArea fx:id="dealerScore" editable="false" minHeight="120.0" minWidth="300.0" wrapText="true">
+                <VBox.margin>
+                    <Insets bottom="20.0" top="20.0"/>
+                </VBox.margin>
+            </TextArea>
+            <TextArea fx:id="playerScore" editable="false" minHeight="120.0" minWidth="300.0" wrapText="true">
+                <VBox.margin>
+                    <Insets bottom="150.0"/>
+                </VBox.margin>
+            </TextArea>
         </VBox>
     </right>
     <left>
         <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-            <children>
-                <ImageView fx:id="bet50" fitHeight="80.0" fitWidth="80.0" layoutY="500" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="/resources/Chips/chipRed.png" />
-                    </image>
-                </ImageView>
-                <ImageView fx:id="bet100" fitHeight="80.0" fitWidth="80.0" layoutX="100" layoutY="500" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="/resources/Chips/chipBlue.png" />
-                    </image>
-                </ImageView>
-                <ImageView fx:id="bet200" fitHeight="80.0" fitWidth="80.0" layoutY="600" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="/resources/Chips/chipGreen.png" />
-                    </image>
-                </ImageView>
-                <ImageView fx:id="bet500" fitHeight="80.0" fitWidth="80.0" layoutX="100" layoutY="600" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="/resources/Chips/chipBlack.png" />
-                    </image>
-                </ImageView>
-                <TextArea fx:id="bet" layoutY="700.0" prefHeight="200.0" prefWidth="200.0" wrapText="true" />
-                <TextArea fx:id="chip" layoutY="400.0" prefHeight="100.0" prefWidth="200.0" wrapText="true" />
-            </children>
+            <ImageView fx:id="bet50" fitHeight="80.0" fitWidth="80.0" layoutY="500" pickOnBounds="true"
+                       preserveRatio="true">
+                <Image url="/resources/Chips/chipRed.png"/>
+            </ImageView>
+            <ImageView fx:id="bet100" fitHeight="80.0" fitWidth="80.0" layoutX="100" layoutY="500" pickOnBounds="true"
+                       preserveRatio="true">
+                <Image url="/resources/Chips/chipBlue.png"/>
+            </ImageView>
+            <ImageView fx:id="bet200" fitHeight="80.0" fitWidth="80.0" layoutY="600" pickOnBounds="true"
+                       preserveRatio="true">
+                <Image url="/resources/Chips/chipGreen.png"/>
+            </ImageView>
+            <ImageView fx:id="bet500" fitHeight="80.0" fitWidth="80.0" layoutX="100" layoutY="600" pickOnBounds="true"
+                       preserveRatio="true">
+                <Image url="/resources/Chips/chipBlack.png"/>
+            </ImageView>
+            <TextArea fx:id="bet" layoutY="700.0" prefHeight="200.0" prefWidth="200.0" wrapText="true"/>
+            <TextArea fx:id="chip" layoutY="375.0" prefHeight="120.0" prefWidth="200.0" wrapText="true"/>
         </AnchorPane>
     </left>
 </BorderPane>

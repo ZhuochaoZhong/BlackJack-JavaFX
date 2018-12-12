@@ -1,5 +1,5 @@
 @font-face{
-    src: url("/kenvector_future_thin.ttf");
+    src: url("/Chalkduster.ttf");
 }
 
 .root{
@@ -10,35 +10,35 @@
 #newGame{
     -fx-background-image:url("/resources/Buttons/grey_button14.png");
     -fx-background-size: cover;
-    -fx-font-family: "KenVector Future Thin";
+    -fx-font-family: "Chalkduster";
 }
 
 #deal{
     -fx-background-image:url("/resources/Buttons/blue_button02.png");
     -fx-background-size: cover;
-    -fx-font-family: "KenVector Future Thin";
+    -fx-font-family: "Chalkduster";
 }
 
 #hit{
     -fx-background-image:url("/resources/Buttons/green_button02.png");
     -fx-background-size: cover;
-    -fx-font-family: "KenVector Future Thin";
+    -fx-font-family: "Chalkduster";
 }
 
 #stand{
     -fx-background-image:url("/resources/Buttons/red_button01.png");
     -fx-background-size: cover;
-    -fx-font-family: "KenVector Future Thin";
+    -fx-font-family: "Chalkduster";
 }
 
 #quit{
     -fx-background-image:url("/resources/Buttons/yellow_button02.png");
     -fx-background-size: cover;
-    -fx-font-family: "KenVector Future Thin";
+    -fx-font-family: "Chalkduster";
 }
 
 .text-area, .text-area .viewport, .text-area .content {
-    -fx-font-family: "KenVector Future Thin";
+    -fx-font-family: "Chalkduster";
     -fx-font-size: 24;
     -fx-text-fill: white;
     -fx-display-caret:true;
@@ -46,11 +46,13 @@
 }
 
 #result, result.content {
-    -fx-font-size: 28;
+    -fx-font-size: 32;
+    -fx-text-fill: yellow;
     -fx-text-alignment: center;
 }
 
 #newDeck, newDeck.content {
     -fx-font-size: 28;
+    -fx-text-fill: yellow;
     -fx-text-alignment: center;
 }

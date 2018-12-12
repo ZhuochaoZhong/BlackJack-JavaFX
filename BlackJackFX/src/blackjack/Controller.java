@@ -127,12 +127,14 @@ public class Controller {
         dealerCards.addAll(Arrays.asList(dCard1, dCard2, dCard3, dCard4, dCard5, dCard6));
         bet.setText("Please place your bet first!");
         chip.setText("You have " + player.getChips() + " chips");
+        dealerScore.clear();
+        playerScore.clear();
         result.clear();
         initButtons();
     }
 
     @FXML
-    public void setBet(int bet) {
+    private void setBet(int bet) {
         player.setBet(bet);
         chip.setText("You placed " + player.getBet() + " bet.");
         resetHands();
@@ -291,17 +293,17 @@ public class Controller {
             bet100.setDisable(false);
             bet200.setDisable(false);
             bet500.setDisable(false);
-        } else if (currentChips >= 200 && currentChips < 500) {
+        } else if (currentChips >= 200) {
             bet50.setDisable(false);
             bet100.setDisable(false);
             bet200.setDisable(false);
             bet500.setDisable(true);
-        } else if (currentChips >= 100 && currentChips < 200) {
+        } else if (currentChips >= 100) {
             bet50.setDisable(false);
             bet100.setDisable(false);
             bet200.setDisable(true);
             bet500.setDisable(true);
-        } else if (currentChips >= 50 && currentChips < 100) {
+        } else if (currentChips >= 50) {
             bet50.setDisable(false);
             bet100.setDisable(true);
             bet200.setDisable(true);
